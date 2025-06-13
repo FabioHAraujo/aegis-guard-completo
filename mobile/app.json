@@ -1,0 +1,74 @@
+{
+  "expo": {
+    "name": "aegis-guard",
+    "slug": "aegis-guard",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Permita que o Aegis Guard use sua localização sempre e enquanto estiver usando o app.",
+        "NSLocationAlwaysUsageDescription": "Permita que o Aegis Guard use sua localização sempre.",
+        "NSLocationWhenInUseUsageDescription": "Permita que o Aegis Guard use sua localização enquanto estiver usando o app.",
+        "UIBackgroundModes": [
+          "location"
+        ]
+      },
+      "config": {
+        "googleMapsApiKey": "aqui-vai-sua-chave-do-google-maps"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.anonymous.aegisguard",
+      "config": {
+        "googleMaps": {
+          "apiKey": "aqui-vai-sua-chave-do-google-maps"
+        }
+      },
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_LOCATION"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "fbedf305-82bc-40b4-97e9-a233ce591863"
+      }
+    },
+    "owner": "akaiurami"
+  }
+}
